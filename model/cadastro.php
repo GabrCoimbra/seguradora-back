@@ -5,6 +5,7 @@ require_once './conn/conexao.php';
 $database = new Database();
 $db = $database->conexao();
     function cadastrar($dados){
+        global $db;
         echo json_encode($dados['nome']);
         $sql = 'insert into tb_calculo values(
             null,
