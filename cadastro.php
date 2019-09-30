@@ -9,7 +9,8 @@ require_once 'model/cadastro.php';
 
 $json = file_get_contents('php://input');
 $obj  = json_decode($json, true);
-if(cadastrar($obj)){
+echo json_encode($obj['nome']);
+/*if(cadastrar($obj)){
     echo json_encode('Cadastrado com sucesso');
 }
 else{
