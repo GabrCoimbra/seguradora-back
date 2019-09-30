@@ -15,7 +15,7 @@ curl_setopt($ch, CURLOPT_URL, "http://www.speedyofficer.com.br/desenvVeiculos/ws
 $result = curl_exec($ch);
 
 curl_close($ch);
-
+echo $result;
 $result = json_decode($result, true);
 
 /*
