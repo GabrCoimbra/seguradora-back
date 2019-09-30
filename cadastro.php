@@ -9,5 +9,5 @@ require_once 'model/cadastro.php';
 
 $json = file_get_contents('php://input');
 $obj  = json_decode($json, true);
-echo $_POST;
+var_dump($_POST);
 echo json_decode($obj);
