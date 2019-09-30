@@ -5,7 +5,6 @@ require_once 'model/listagem.php';
 
 $dados = array();
 $calculos = listar();
-var_dump($calculos);
 foreach ($calculos as $i) {
     $i = array(
         'id' => $i['cd_Calculo'],

@@ -4,7 +4,6 @@ require_once './conn/conexao.php';
 
 $database = new Database();
 $db = $database->conexao();
-var_dump($db);die();
     function listar()
     {
         global $db;
