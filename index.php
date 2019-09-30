@@ -6,6 +6,7 @@ require_once 'model/listagem.php';
 $dados = array();
 $calculos = listar();
 foreach ($calculos as $i) {
+    var_dump($i);
     $i = array(
         'id' => $i['cd_Calculo'],
         'nome' => $i['nm_Condutor'],
@@ -15,5 +16,4 @@ foreach ($calculos as $i) {
     array_push($dados, $i);
     echo $i['cd_Calculo'];
 }
-
-echo 'vai';
+var_dump($dados);

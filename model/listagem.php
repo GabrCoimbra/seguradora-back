@@ -9,7 +9,6 @@ $db = $database->conexao();
         global $db;
         $query="Select * from tb_calculo";
         $teste = $db->query($query);
-        var_dump($teste);
         $retorno = mysqli_fetch_all($teste);
         return $teste;
     }
