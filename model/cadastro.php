@@ -15,6 +15,6 @@ $db = $database->conexao();
             "ka",
             1
             )';
-        $envia = $db->query($query);
+        $envia = $db->query($sql);
         return $envia;
     }
