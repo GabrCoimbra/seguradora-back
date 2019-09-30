@@ -4,7 +4,7 @@ require_once './conn/conexao.php';
 
 $database = new Database();
 $db = $database->conexao();
-    function cadastrar($dados,$veiculo,$valor){
+    function cadastrar($dados){
         global $db;
         $sql = 'insert into tb_calculo values(
             null,
@@ -12,8 +12,8 @@ $db = $database->conexao();
             "'.$dados['sexo'].'",
             "'.$dados['date'].'",
             "'.$dados['marca'].'",
-            "'.$veiculo.'",
-            '.$valor.'
+            "'.$dados['veiculo'].'",
+            '.$dados['valor'].'
             )';
         $envia = $db->query($sql);
         return $envia;
