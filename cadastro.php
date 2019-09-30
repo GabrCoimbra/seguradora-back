@@ -10,7 +10,7 @@ require_once 'model/cadastro.php';
 $json = file_get_contents('php://input');
 $obj  = json_decode($json, true);
 $retorno = cadastrar($obj);
-/*if(cadastrar($obj)){
+if($retorno){
     echo json_encode('Cadastrado com sucesso');
 }
 else{
