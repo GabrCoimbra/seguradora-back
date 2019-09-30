@@ -8,11 +8,11 @@ $db = $database->conexao();
         global $db;
         $sql = 'insert into tb_calculo values(
             null,
-            '.$dados['nome'].',
-            '.$dados['sexo'].',
-            '.$dados['date'].',
-            ford,
-            ka,
+            "'.$dados['nome'].'",
+            "'.$dados['sexo'].'",
+            "'.$dados['date'].'",
+            "ford",
+            "ka",
             1
             )';
         $envia = $db->query($query);
