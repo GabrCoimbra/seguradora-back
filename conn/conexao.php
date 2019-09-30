@@ -1,7 +1,9 @@
 <?php
-class Database{
-    public function conexao(){
-        $conn = new mysqli("localhost","root","usbw","seguradora");
+class Database
+{
+    public function conexao()
+    {
+        $conn = new mysqli("mysql.fatecrl.edu.br", "fatecrl05", "seguradora123", "fatecrl05");
         $conn->query("SET NAMES 'utf8'");
         $conn->query('SET character_set_connection=utf8');
         $conn->query('SET character_set_client=utf8');
@@ -9,4 +11,3 @@ class Database{
         return $conn;
     }
 }
-?>
