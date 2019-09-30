@@ -13,7 +13,7 @@ $ch = curl_init();
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_URL, "http://www.speedyofficer.com.br/desenvVeiculos/wsRstSpeedyVeiculos_Case.dll/veiculo?cod_marca=10");//.$obj['idMarcca']);
 $result = curl_exec($ch);
-
+$result = array_search('Ranger', $result);
 curl_close($ch);
 echo $result;
 $result = json_decode($result, true);
