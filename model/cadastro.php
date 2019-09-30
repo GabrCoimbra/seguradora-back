@@ -11,8 +11,8 @@ $db = $database->conexao();
             '.$dados['nome'].',
             '.$dados['sexo'].',
             '.$dados['date'].',
-            '.$dados['marca'].',
-            '.$dados['veiculo'].',
+            ford,
+            ka,
             1
             )';
         $envia = $db->query($query);
