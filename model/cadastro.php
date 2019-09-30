@@ -8,9 +8,9 @@ $db = $database->conexao();
         global $db;
         $sql = 'insert into tb_calculo values(
             null,
-            "'.$dados['nome'].'",
-            "'.$dados['sexo'].'",
-            "'.$dados['date'].'",
+            "Jorge",
+            "m",
+            "1997-05-29",
             "ford",
             "ka",
             1
