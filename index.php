@@ -6,7 +6,6 @@ require_once 'model/listagem.php';
 $dados = array();
 $calculos = listar();
 foreach ($calculos as $i) {
-    var_dump($i);
     $i = array(
         'id' => $i['cd_Calculo'],
         'nome' => $i['nm_Condutor'],
@@ -14,6 +13,7 @@ foreach ($calculos as $i) {
         'veiculo' => $i['ds_Veiculo']
     );
     array_push($dados, $i);
-    echo $i['cd_Calculo'];
 }
-var_dump($dados);
+
+
+echo json_encode($dados);
