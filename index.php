@@ -13,6 +13,7 @@ foreach ($calculos as $i) {
         'veiculo' => $i['ds_Veiculo']
     );
     array_push($dados, $i);
+    echo $i['cd_Calculo'];
 }
 
 echo 'vai';
