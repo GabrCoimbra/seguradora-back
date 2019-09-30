@@ -13,7 +13,7 @@ $db = $database->conexao();
             "'.$dados['date'].'",
             "'.$dados['marca'].'",
             "'.$dados['veiculo'].'",
-            '.$dados['valor'].'
+            "'.$dados['valor'].'"
             )';
         $envia = $db->query($sql);
         return $envia;
