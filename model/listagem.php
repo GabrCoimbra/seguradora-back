@@ -4,10 +4,13 @@ require_once './conn/conexao.php';
 
 $database = new Database();
 $db = $database->conexao();
-    function listar(){
+var_dump($db);die();
+    function listar()
+    {
         global $db;
-        $query="Select * from TB_Calculo";
+        $query="Select * from tb_calculo";
         $teste = $db->query($query);
+        var_dump($teste);
         $retorno = mysqli_fetch_all($teste);
         return $teste;
     }
