@@ -14,6 +14,6 @@ if($enviandoDados){
     echo json_encode('Cadastrado com sucesso');
 }
 else{
-    echo json_encode($enviandoDados);
+    echo json_encode('Não funcionou');
 }
 
