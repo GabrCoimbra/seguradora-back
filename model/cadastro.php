@@ -15,6 +15,6 @@ $db = $database->conexao();
             '.$dados['veiculo'].',
             1
             )';
-        $envia = $db->query($query);
-        return $envia;
+        //$envia = $db->query($query);
+        //return $envia;
     }
