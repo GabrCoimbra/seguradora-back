@@ -26,13 +26,13 @@ foreach ($calculos as $i) {
             case  $idade < 35:
                 $ac= $vlBase*0.02;
                 break;
-            case $idade > 35:            
+            case $idade > 35:
                 $ac = 0;
                 break;
             default:
                 break;
         }
-        $ac1 = $i['ds_Sexo'] == "M" ? $vlBase*0.1 : 0;  
+        $ac1 = $i['ds_Sexo'] == "M" ? $vlBase*0.1 : 0;
         $seguro = $vlBase + $ac + $ac1;
     }
     $i = array(

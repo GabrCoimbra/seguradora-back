@@ -4,7 +4,8 @@ require_once './conn/conexao.php';
 
 $database = new Database();
 $db = $database->conexao();
-    function editar($dados){
+    function editar($dados)
+    {
         global $db;
         $sql = 'update tb_calculo set
             nm_Condutor = "'.$dados['nome'].'",
