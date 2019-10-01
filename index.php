@@ -43,7 +43,7 @@ foreach ($calculos as $i) {
         'marca' => $i['ds_Marca'],
         'veiculo' => $i['ds_Veiculo'],
         'valor' => $i['vl_Veiculo'],
-        'seguro' => $idade,
+        'seguro' => $seguro,
     );
     array_push($dados, $i);
 }
