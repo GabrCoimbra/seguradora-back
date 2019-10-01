@@ -6,9 +6,9 @@ require_once 'model/cadastro.php';
 $dados = array();
 if ($_GET['id']) {
     $id=$_GET['id'];
-    $retorno = cadastrar($id);
+    $retorno = excluir($id);
     if($retorno){
-        echo json_encode($id);
+        echo json_encode('Excluido com sucesso');
     }
     else{
         echo json_encode('erro ao excluir');
