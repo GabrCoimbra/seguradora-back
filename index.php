@@ -11,6 +11,30 @@ if ($_GET['id']) {
 }
 $calculos = listar($id);
 foreach ($calculos as $i) {
+    //Logica do valor do seguro
+    if ($id) {
+        $vlBase = $i['vl_Veiculo']*0.03;
+        $idade = calculo_idade($i['dt_Nascimento']);
+        switch ($idade) {
+            case  $idade < 25:
+                $ac= $i['vl_Veiculo']*0.1;
+                break;
+            case  $idade < 30:
+                $ac= $i['vl_Veiculo']*0.05;
+                break;
+            
+            case  $idade < 35:
+                $ac= $i['vl_Veiculo']*0.02;
+                break;
+            case $idade > 35:            
+                $ac = 0;
+                break;
+            default:
+                break;
+        }
+        $ac1 = $i['ds_Sexo'] == "M" ? $i['vl_Veiculo']*0.1 : 0;  
+        $seguro = $vlBase + $ac + $ac1;
+    }
     $i = array(
         'id' => $i['cd_Calculo'],
         'nome' => $i['nm_Condutor'],
@@ -18,9 +42,29 @@ foreach ($calculos as $i) {
         'date' => $i['dt_Nascimento'],
         'marca' => $i['ds_Marca'],
         'veiculo' => $i['ds_Veiculo'],
-        'valor' => $i['vl_Veiculo']
+        'valor' => $i['vl_Veiculo'],
+        'seguro' => $seguro,
     );
     array_push($dados, $i);
+}
+
+
+function calculo_idade($data)
+{
+    //Data atual
+    $dia = date('d');
+    $mes = date('m');
+    $ano = date('Y');
+    //Data do aniversário
+   
+    $nascimento = explode('-', $nascimento);
+    $dianasc = ($nascimento[2]);
+    $mesnasc = ($nascimento[1]);
+    $anonasc = ($nascimento[0]);
+    
+    //Calculando sua idade
+    $idade = $ano - $anonasc;
+    return $idade;
 }
 
 
