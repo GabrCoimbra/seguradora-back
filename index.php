@@ -14,7 +14,7 @@ foreach ($calculos as $i) {
     $i = array(
         'id' => $i['cd_Calculo'],
         'nome' => $i['nm_Condutor'],
-        'sexo' => $i['ds_sexo'],
+        'sexo' => $i['ds_Sexo'],
         'date' => $i['dt_Nascimento'],
         'marca' => $i['ds_Marca'],
         'veiculo' => $i['ds_Veiculo'],
