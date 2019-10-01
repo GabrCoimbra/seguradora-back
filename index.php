@@ -10,7 +10,6 @@ if ($_GET['id']) {
     $id = null;
 }
 $calculos = listar($id);
-var_dump($calculos);
 foreach ($calculos as $i) {
     $i = array(
         'id' => $i['cd_Calculo'],
