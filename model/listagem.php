@@ -9,7 +9,7 @@ $db = $database->conexao();
         global $db;
         $query="Select * from tb_calculo";
         if ($id) {
-            $query.= " where cd_Consulta = ".$id;
+            $query.= " where cd_Calculo = ".$id;
         }
         $teste = $db->query($query);
         $retorno = mysqli_fetch_all($teste);
