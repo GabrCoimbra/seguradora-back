@@ -4,7 +4,12 @@ header("Content-Type: application/json; charset=UTF-8");
 require_once 'model/listagem.php';
 
 $dados = array();
-$calculos = listar();
+if ($_GET['id']) {
+    $id=$_GET['id'];
+} else {
+    $id = null;
+}
+$calculos = listar($id);
 foreach ($calculos as $i) {
     $i = array(
         'id' => $i['cd_Calculo'],
