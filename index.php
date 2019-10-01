@@ -3,7 +3,7 @@ header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 require_once 'model/listagem.php';
 
-$dados = array('dados');
+$dados = array();
 if ($_GET['id']) {
     $id=$_GET['id'];
 } else {
