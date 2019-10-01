@@ -17,14 +17,14 @@ foreach ($calculos as $i) {
         $idade = calculo_idade($i['dt_Nascimento']);
         switch ($idade) {
             case  $idade < 25:
-                $ac= $i['vl_Veiculo']*0.1;
+                $ac= $vlBase*0.1;
                 break;
             case  $idade < 30:
-                $ac= $i['vl_Veiculo']*0.05;
+                $ac= $vlBase*0.05;
                 break;
             
             case  $idade < 35:
-                $ac= $i['vl_Veiculo']*0.02;
+                $ac= $vlBase*0.02;
                 break;
             case $idade > 35:            
                 $ac = 0;
@@ -32,7 +32,7 @@ foreach ($calculos as $i) {
             default:
                 break;
         }
-        $ac1 = $i['ds_Sexo'] == "M" ? $i['vl_Veiculo']*0.1 : 0;  
+        $ac1 = $i['ds_Sexo'] == "M" ? $vlBase*0.1 : 0;  
         $seguro = $vlBase + $ac + $ac1;
     }
     $i = array(
@@ -43,7 +43,7 @@ foreach ($calculos as $i) {
         'marca' => $i['ds_Marca'],
         'veiculo' => $i['ds_Veiculo'],
         'valor' => $i['vl_Veiculo'],
-        'seguro' => $vlBase,
+        'seguro' => $ac,
     );
     array_push($dados, $i);
 }
