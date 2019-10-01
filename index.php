@@ -17,7 +17,7 @@ foreach ($calculos as $i) {
         'marca' => $i['ds_Marca'],
         'veiculo' => $i['ds_Veiculo']
     );
-    array_push($dados['dados'], $i);
+    array_push($dados, $i);
 }
 
 
