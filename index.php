@@ -15,7 +15,8 @@ foreach ($calculos as $i) {
         'id' => $i['cd_Calculo'],
         'nome' => $i['nm_Condutor'],
         'marca' => $i['ds_Marca'],
-        'veiculo' => $i['ds_Veiculo']
+        'veiculo' => $i['ds_Veiculo'],
+        'valor' => $i['vl_Veiculo']
     );
     array_push($dados, $i);
 }
