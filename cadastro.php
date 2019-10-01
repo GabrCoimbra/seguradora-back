@@ -13,14 +13,13 @@ $json = file_get_contents('php://input');
 //Transformando o json em array
 $obj  = json_decode($json, true);
 
-//Enviando os parametros para a função 
-$retorno = cadastrar($obj);
-
-//Verifica se foi cadastrado
-if($retorno){
-    echo json_encode('Cadastrado com sucesso');
+if (!empty($obj)) {
+    //Enviando os parametros para a função
+    $retorno = cadastrar($obj);
 }
-else{
+//Verifica se foi cadastrado
+if ($retorno) {
+    echo json_encode('Cadastrado com sucesso');
+} else {
     echo json_encode('Não funcionou');
 }
-
