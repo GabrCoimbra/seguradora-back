@@ -8,7 +8,7 @@ if ($_GET['id']) {
     $id=$_GET['id'];
     $retorno = cadastrar($id);
     if($retorno){
-        echo json_encode('Excluido com sucesso');
+        echo json_encode($id);
     }
     else{
         echo json_encode('erro ao excluir');
