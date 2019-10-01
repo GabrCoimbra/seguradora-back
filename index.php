@@ -3,7 +3,7 @@ header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 require_once 'model/listagem.php';
 
-$dados = array();
+$dados = array('dados');
 if ($_GET['id']) {
     $id=$_GET['id'];
 } else {
@@ -17,7 +17,7 @@ foreach ($calculos as $i) {
         'marca' => $i['ds_Marca'],
         'veiculo' => $i['ds_Veiculo']
     );
-    array_push($dados, $i);
+    array_push($dados['dados'], $i);
 }
 
 
