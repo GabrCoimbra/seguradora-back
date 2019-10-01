@@ -55,7 +55,7 @@ function calculo_idade($data)
     $ano = date('Y');
     //Data do aniversário
    
-    $nascimento = explode('-', $nascimento);
+    $nascimento = explode('-', $data);
     $anonasc = ($nascimento[0]);
     
     //Calculando sua idade
