@@ -43,7 +43,7 @@ foreach ($calculos as $i) {
         'marca' => $i['ds_Marca'],
         'veiculo' => $i['ds_Veiculo'],
         'valor' => $i['vl_Veiculo'],
-        'seguro' => $ac,
+        'seguro' => $idade,
     );
     array_push($dados, $i);
 }
@@ -52,14 +52,10 @@ foreach ($calculos as $i) {
 function calculo_idade($data)
 {
     //Data atual
-    $dia = date('d');
-    $mes = date('m');
     $ano = date('Y');
     //Data do aniversário
    
     $nascimento = explode('-', $nascimento);
-    $dianasc = ($nascimento[2]);
-    $mesnasc = ($nascimento[1]);
     $anonasc = ($nascimento[0]);
     
     //Calculando sua idade
