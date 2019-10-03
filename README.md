@@ -3,7 +3,7 @@
 Nesse projeto encontra-se a listagem, editar, excluir consultas
 
 | AÇÃO | RESUMO | URL |  
-|----------|----------|  
+|----------|----------|----------|  
 | Listar (GET) | Listar todas as consultas | https://seguradora-back.herokuapp.com/ |  
 | Listar/[:id] (GET) |Listar apenas uma consulta por ID | https://seguradora-back.herokuapp.com/index.php?id=[:id] |  
 | Salvar (POST) | Criar uma nova consulta gerada via Json |  https://seguradora-back.herokuapp.com/cadastro.php |  
@@ -12,8 +12,7 @@ Nesse projeto encontra-se a listagem, editar, excluir consultas
 
 ## Banco de dados do projeto
 O banco de dados se encontra na pasta [/banco](https://github.com/GabrCoimbra/seguradora-back/blob/master/banco/tb_calculo.sql)  
-estrutura:
-
+estrutura  
 #TB_Consulta  
 
 |NOME | TIPO | NULL| AUTO_INCREMENT|
