@@ -10,10 +10,10 @@ Nesse projeto encontra-se a listagem, editar, excluir consultas
 | Editar (POST) | Editar a consulta selecionada enviada via Json | https://seguradora-back.herokuapp.com/editar.php |  
 | Excluir/[:id] (GET) | Excluir a consulta que foi selecionada | https://seguradora-back.herokuapp.com/Excluir.php?id=[:id]|  
 
-## Banco de dados do projeto
+# Banco de dados do projeto
 O banco de dados se encontra na pasta [/banco](https://github.com/GabrCoimbra/seguradora-back/blob/master/banco/tb_calculo.sql)  
 estrutura  
-#TB_Consulta  
+## TB_Consulta  
 
 |NOME | TIPO | NULL| AUTO_INCREMENT|
 |----------|----------|----------|----------|  
