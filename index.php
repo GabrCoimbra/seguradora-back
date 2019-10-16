@@ -4,7 +4,7 @@ header("Content-Type: application/json; charset=UTF-8");
 require_once 'model/listagem.php';
 
 $dados = array();
-if ($_GET['id']) {
+if (isset($_GET['id'])) {
     $id=$_GET['id'];
 } else {
     $id = null;
