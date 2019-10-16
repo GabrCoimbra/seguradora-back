@@ -18,8 +18,6 @@ if (!empty($obj) && isset($obj)) {
     if (isset($obj['nome']) && strlen($obj['nome']) > 3) {
         //Enviando os parametros para a função
         $retorno = cadastrar($obj);
-    } else {
-        echo "estamos aqui";
     }
 }
 //Verifica se foi cadastrado
