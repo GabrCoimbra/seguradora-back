@@ -13,16 +13,16 @@ $json = file_get_contents('php://input');
 //Transformando o json em array
 $obj  = json_decode($json, true);
 
-if (!empty($obj) && !isset($obj)) {
+if (!empty($obj) && isset($obj)) {
     //verifica se existe o campo nome
-    if ( isset($obj['nome']) && strlen($obj['nome']) > 3) {
+    if (isset($obj['nome']) && strlen($obj['nome']) > 3) {
         //Enviando os parametros para a função
         $retorno = cadastrar($obj);
     }
 }
 //Verifica se foi cadastrado
 if ($retorno) {
-    echo json_encode('Cadastrado com sucesso');
+    echo json_encode('sucesso');
 } else {
-    echo json_encode('Não funcionou');
+    echo json_encode('error');
 }
