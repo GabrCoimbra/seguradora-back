@@ -6,7 +6,7 @@ $database = new Database();
 $db = $database->conexao();
     function listar($id)
     {
-        global $db;
+        $db;
         $query="Select * from tb_calculo ";
         if ($id) {
             $query.= " where cd_Calculo = ".$id;
