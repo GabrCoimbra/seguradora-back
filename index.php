@@ -35,6 +35,9 @@ foreach ($calculos as $i) {
         $ac1 = $i['ds_Sexo'] == "M" ? $vlBase*0.1 : 0;
         $seguro = $vlBase + $ac + $ac1;
     }
+    if(isset($_GET['st'])){
+        $i['dt_Nascimento'] = date("d/m/Y", strtotime($i['dt_Nascimento']));
+    }
     $i = array(
         'id' => $i['cd_Calculo'],
         'nome' => $i['nm_Condutor'],
