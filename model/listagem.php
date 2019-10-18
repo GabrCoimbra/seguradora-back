@@ -11,7 +11,7 @@ $db = $database->conexao();
         if ($id) {
             $query.= " where cd_Calculo = ".$id;
         }
-        $query .= "order by cd_Calculo desc";
+        $query .= "ORDER BY cd_Calculo DESC";
         $teste = $db->query($query);
         $retorno = mysqli_fetch_all($teste);
        
