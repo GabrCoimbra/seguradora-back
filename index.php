@@ -15,7 +15,6 @@ foreach ($calculos as $i) {
     if ($id) {
         $vlBase = $i['vl_Veiculo']*0.03;
         $idade = calculo_idade($i['dt_Nascimento']);
-        $i['dt_Nascimento'] = date("d/m/Y", strtotime($i['dt_Nascimento']));
         switch ($idade) {
             case  $idade < 25:
                 $ac= $vlBase*0.1;
